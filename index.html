@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kallol Chakrabarti - Digital Book Library</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1535 50%, #2d1b4e 100%);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+            border-radius: 20px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.2);
+        }
+
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #da70d6, #ba55d3, #9370db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #b8b8d1;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .book-card {
+            background: linear-gradient(145deg, rgba(30, 30, 60, 0.6), rgba(20, 20, 40, 0.6));
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(138, 43, 226, 0.4);
+            border-color: rgba(138, 43, 226, 0.6);
+        }
+
+        .book-card h3 {
+            color: #da70d6;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .book-card p {
+            color: #c0c0d8;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .book-topics {
+            margin: 20px 0;
+        }
+
+        .book-topics h4 {
+            color: #ba55d3;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .book-topics ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .book-topics li {
+            color: #a8a8c0;
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9em;
+        }
+
+        .book-topics li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #9370db;
+        }
+
+        .audience {
+            background: rgba(138, 43, 226, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #ba55d3;
+        }
+
+        .audience strong {
+            color: #da70d6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #8a2be2, #9370db);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-top: 15px;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #9370db, #ba55d3);
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .platforms {
+            background: linear-gradient(145deg, rgba(30, 30, 60, 0.4), rgba(20, 20, 40, 0.4));
+            border-radius: 15px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .platforms h2 {
+            color: #da70d6;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .platform-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .platform-btn {
+            padding: 15px 35px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(75, 0, 130, 0.3));
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .platform-btn:hover {
+            background: linear-gradient(135deg, #8a2be2, #9370db);
+            border-color: #ba55d3;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .contact {
+            color: #b8b8d1;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #da70d6;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #ba55d3;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #9370db;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .platform-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kallol Chakrabarti</h1>
+            <p class="tagline">Digital library of practical wisdom and modern insights. Features wisdom tales from Sanatan Dharma, empowerment guides for homemakers, geopolitical analysis, and philosophical reflections for students, families, and seekers exploring timeless values in contemporary life.</p>
+        </header>
+
+        <div class="books-grid">
+            <div class="book-card">
+                <h3>Ghar Se Shakti</h3>
+                <p>A Practical Guide for the Confident Homemaker</p>
+                <p>A practical companion for every woman who runs a home and quietly shapes society. This ready reckoner turns the homemaker into an informed decision-maker.</p>
+                
+                <div class="book-topics">
+                    <h4>Topics Covered</h4>
+                    <ul>
+                        <li>Digital safety & AI awareness</li>
+                        <li>Legal rights & fraud protection</li>
+                        <li>Government schemes</li>
+                        <li>Independent thinking</li>
+                    </ul>
+                </div>
+                
+                <div class="audience">
+                    <strong>Perfect for:</strong> Homemakers, mothers, daughters, caregivers
+                </div>
+                
+                <a href="https://cosmofeed.com/vp/696b444e469b460013487bd1" class="btn" target="_blank">Get the Book</a>
+            </div>
+
+            <div class="book-card">
+                <h3>Stories of the Dharma Shield</h3>
+                <p>15 Wisdom Tales for the Modern Mind</p>
+                <p>A collection of quiet, powerful wisdom tales exploring identity, belief, tradition, power, compassion, and courage through reflective stories.</p>
+                
+                <div class="book-topics">
+                    <h4>Key Themes</h4>
+                    <ul>
+                        <li>Understanding as protection</li>
+                        <li>Clarity over fear</li>
+                        <li>Questioning inherited answers</li>
+                        <li>Building inner wisdom</li>
+                    </ul>
+                </div>
+                
+                <div class="audience">
+                    <strong>Perfect for:</strong> Reflective readers seeking depth and meaning
+                </div>
+                
+                <a href="https://superprofile.bio/vp/stories-of-the-dharma-shield-15-wisdom-tales-for-the-modern-mind" class="btn" target="_blank">Get the Book</a>
+            </div>
+
+            <div class="book-card">
+                <h3>The Hunger That Never Ends</h3>
+                <p>Wisdom Tales on Greed and Contentment</p>
+                <p>Twenty short wisdom tales drawn from the philosophical spirit of Sanatan Dharma, exploring greed, ambition, desire, and the question of "enough."</p>
+                
+                <div class="book-topics">
+                    <h4>Explores</h4>
+                    <ul>
+                        <li>Greed in its quiet forms</li>
+                        <li>Ambition vs. responsibility</li>
+                        <li>Accumulation vs. security</li>
+                        <li>Finding true satisfaction</li>
+                    </ul>
+                </div>
+                
+                <div class="audience">
+                    <strong>Perfect for:</strong> Those thinking deeply about money, success, and contentment
+                </div>
+                
+                <a href="https://superprofile.bio/vp/the-hunger-that-never-ends" class="btn" target="_blank">Get the Book</a>
+            </div>
+
+            <div class="book-card">
+                <h3>Silent Wars</h3>
+                <p>Geopolitical Strategies Understanding</p>
+                <p>An insightful exploration of modern geopolitics, strategic thinking, and global power dynamics for the informed citizen.</p>
+                
+                <div class="book-topics">
+                    <h4>Topics Covered</h4>
+                    <ul>
+                        <li>Global power dynamics</li>
+                        <li>Strategic thinking</li>
+                        <li>Modern geopolitics</li>
+                        <li>World affairs analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="audience">
+                    <strong>Perfect for:</strong> Students, professionals, world affairs enthusiasts
+                </div>
+                
+                <a href="https://www.amazon.in/Silent-Wars-Geopolitical-Strategies-Understanding/dp/B0FBBJJC8D" class="btn" target="_blank">Get the Book</a>
+            </div>
+        </div>
+
+        <div class="platforms">
+            <h2>📚 Browse All Books</h2>
+            <div class="platform-links">
+                <a href="https://helixoriginator.gumroad.com/l/dharma-shield?_gl=1*sojli9*_ga*MTg5MjkwNzA1Mi4xNzY4NjY2NDk0*_ga_6LJN6D94N6*czE3Njg2NjY0OTQkbzEkZzEkdDE3Njg2NjY0OTgkajU2JGwwJGgw" class="platform-btn" target="_blank">🛒 Gumroad Store</a>
+                <a href="https://www.amazon.in/s?k=kallol+chakrabarti" class="platform-btn" target="_blank">📖 Amazon</a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="contact">
+                <p><strong>Contact:</strong> <a href="mailto:kallolchitralimagicpen@gmail.com">kallolchitralimagicpen@gmail.com</a></p>
+            </div>
+            <p class="quote">"Built with wisdom. Shared with purpose."</p>
+            <p class="quote">Simple. Practical. Powerful.</p>
+        </footer>
+    </div>
+</body>
+</html>
