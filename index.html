@@ -7,192 +7,125 @@
 
 <style>
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-background: linear-gradient(135deg, #0a0e27 0%, #1a1535 50%, #2d1b4e 100%);
-color: #e0e0e0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-line-height: 1.6;
-min-height: 100vh;
+body{
+background:linear-gradient(135deg,#0a0e27 0%,#1a1535 50%,#2d1b4e 100%);
+color:#e0e0e0;
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+line-height:1.6;
+min-height:100vh;
 }
 
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
 }
 
-header {
-text-align: center;
-padding: 60px 20px;
-background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
-border-radius: 20px;
-margin-bottom: 50px;
-border: 1px solid rgba(138, 43, 226, 0.3);
-box-shadow: 0 10px 40px rgba(138, 43, 226, 0.2);
+header{
+text-align:center;
+padding:60px 20px;
+background:linear-gradient(135deg,rgba(138,43,226,0.1),rgba(75,0,130,0.1));
+border-radius:20px;
+margin-bottom:40px;
+border:1px solid rgba(138,43,226,0.3);
 }
 
-h1 {
-font-size: 3em;
-background: linear-gradient(135deg, #da70d6, #ba55d3, #9370db);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-margin-bottom: 20px;
-font-weight: 700;
+h1{
+font-size:3em;
+background:linear-gradient(135deg,#da70d6,#ba55d3,#9370db);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:15px;
 }
 
-.tagline {
-font-size: 1.2em;
-color: #b8b8d1;
-max-width: 800px;
-margin: 0 auto;
-line-height: 1.8;
+.tagline{
+color:#b8b8d1;
+max-width:800px;
+margin:auto;
 }
 
-.books-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-margin-bottom: 50px;
+.books-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
 }
 
-.book-card {
-background: linear-gradient(145deg, rgba(30,30,60,0.6), rgba(20,20,40,0.6));
-border-radius: 15px;
-padding: 30px;
-border: 1px solid rgba(138,43,226,0.2);
-transition: all 0.3s ease;
+.book-card{
+background:linear-gradient(145deg,rgba(30,30,60,0.6),rgba(20,20,40,0.6));
+border-radius:15px;
+padding:25px;
+border:1px solid rgba(138,43,226,0.2);
 }
 
-.book-card:hover {
-transform: translateY(-8px);
-box-shadow: 0 15px 40px rgba(138,43,226,0.3);
-border-color: rgba(138,43,226,0.5);
+.book-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 35px rgba(138,43,226,0.3);
 }
 
-.book-card h3 {
-color: #da70d6;
-margin-bottom: 10px;
-font-size: 1.4em;
+.book-card h3{
+color:#da70d6;
+margin-bottom:10px;
 }
 
-.book-card p {
-color: #c0c0d8;
-margin-bottom: 10px;
+.button-row{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
 }
 
-.book-topics ul {
-list-style: none;
-padding-left: 0;
+.btn{
+flex:1;
+min-width:130px;
+text-align:center;
+padding:10px;
+border-radius:20px;
+text-decoration:none;
+font-weight:600;
+font-size:0.9em;
 }
 
-.book-topics li {
-padding: 4px 0;
-color: #a8a8c0;
+/* platform colors */
+
+.superprofile{
+background:#8a2be2;
+color:white;
 }
 
-.audience {
-margin-top: 10px;
-color: #cfcfff;
+.gumroad{
+background:#ff66cc;
+color:white;
 }
 
-/* PLATFORM BUTTON ROW */
-
-.button-row {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-margin-top: 20px;
+.amazon{
+background:#ff9900;
+color:black;
 }
 
-.store-btn {
-flex: 1;
-min-width: 120px;
-text-align: center;
-padding: 10px 15px;
-border-radius: 25px;
-text-decoration: none;
-font-weight: 600;
-font-size: 0.9em;
-transition: all 0.3s ease;
-border: 2px solid transparent;
+.cosmofeed{
+background:#00c9ff;
+color:black;
 }
 
-/* Platform styles */
-
-.amazon {
-background: linear-gradient(135deg,#ff9900,#ffb84d);
-color: black;
+footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+border-top:1px solid rgba(138,43,226,0.2);
 }
 
-.gumroad {
-background: linear-gradient(135deg,#ff4d4d,#ff66cc);
-color: white;
-}
-
-.superprofile {
-background: linear-gradient(135deg,#8a2be2,#ba55d3);
-color: white;
-}
-
-.cosmofeed {
-background: linear-gradient(135deg,#00c9ff,#92fe9d);
-color: black;
-}
-
-.store-btn:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 20px rgba(138,43,226,0.4);
-}
-
-.platforms {
-background: linear-gradient(145deg, rgba(30,30,60,0.4), rgba(20,20,40,0.4));
-border-radius: 15px;
-padding: 40px;
-margin: 50px 0;
-text-align: center;
-border: 1px solid rgba(138,43,226,0.2);
-}
-
-.platform-btn {
-padding: 15px 35px;
-background: linear-gradient(135deg, rgba(138,43,226,0.3), rgba(75,0,130,0.3));
-color: #e0e0e0;
-text-decoration: none;
-border-radius: 30px;
-border: 2px solid rgba(138,43,226,0.5);
-transition: all 0.3s ease;
-font-weight: 600;
-}
-
-.platform-btn:hover {
-background: linear-gradient(135deg,#8a2be2,#9370db);
-}
-
-footer {
-text-align: center;
-padding: 40px 20px;
-border-top: 1px solid rgba(138,43,226,0.2);
-}
-
-.quote {
-color: #9370db;
-margin-top: 10px;
-font-style: italic;
-}
-
-.contact a {
-color: #da70d6;
-text-decoration: none;
+.quote{
+color:#9370db;
+margin-top:10px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -204,122 +137,114 @@ text-decoration: none;
 <h1>Kallol Chakrabarti</h1>
 
 <p class="tagline">
-
-Digital library of practical wisdom and modern insights. Features wisdom tales from Sanatan Dharma, empowerment guides for homemakers, geopolitical analysis, and philosophical reflections for students, families, and seekers exploring timeless values in contemporary life.
-
+Digital library of practical wisdom and modern insights.
 </p>
 
 </header>
 
 <div class="books-grid">
 
-<!-- GHAR SE SHAKTI -->
-
-<div class="book-card">
-
-<h3>Ghar Se Shakti</h3>
-
-<p>A Practical Guide for the Confident Homemaker</p>
-
-<div class="book-topics">
-<ul>
-<li>Digital safety & AI awareness</li>
-<li>Legal rights & fraud protection</li>
-<li>Government schemes</li>
-<li>Independent thinking</li>
-</ul>
-</div>
-
-<div class="audience">
-
-Perfect for homemakers, mothers, daughters, caregivers
-
-</div>
-
-<div class="button-row">
-
-<a href="https://cosmofeed.com/vp/696b444e469b460013487bd1"
-class="store-btn cosmofeed" target="_blank">
-
-Superprofile
-
-</a>
-
-<a href="https://helixoriginator.gumroad.com/l/clyjln?_gl=1*s0e06u*_ga*NDcyMDA2OTk0LjE3NzEwODc2ODI.*_ga_6LJN6D94N6*czE3NzEyOTg1MjMkbzIkZzAkdDE3NzEyOTg1MjMkajYwJGwwJGgw"
-class="store-btn gumroad" target="_blank">
-
-Gumroad
-
-</a>
-
-</div>
-
-</div>
-
-<!-- DHARMA SHIELD -->
+<!-- Stories of Dharma Shield -->
 
 <div class="book-card">
 
 <h3>Stories of the Dharma Shield</h3>
 
-<p>15 Wisdom Tales for the Modern Mind</p>
-
 <div class="button-row">
 
 <a href="https://superprofile.bio/vp/stories-of-the-dharma-shield-15-wisdom-tales-for-the-modern-mind"
-class="store-btn superprofile" target="_blank">
-
+class="btn superprofile" target="_blank">
 Superprofile
-
 </a>
 
-<a href="https://helixoriginator.gumroad.com/l/xhido?_gl=1*k3zg2o*_ga*NDcyMDA2OTk0LjE3NzEwODc2ODI.*_ga_6LJN6D94N6*czE3NzEyOTg1MjMkbzIkZzEkdDE3NzEyOTg2MTIkajYwJGwwJGgw"
-class="store-btn gumroad" target="_blank">
-
+<a href="https://helixoriginator.gumroad.com/l/xhido"
+class="btn gumroad" target="_blank">
 Gumroad
-
 </a>
 
 </div>
 
 </div>
 
-<!-- HUNGER -->
+<!-- Village of Seven Wells -->
+
+<div class="book-card">
+
+<h3>The Village of Seven Wells</h3>
+
+<div class="button-row">
+
+<a href="https://helixoriginator.gumroad.com/l/clyjln"
+class="btn gumroad" target="_blank">
+Gumroad
+</a>
+
+</div>
+
+</div>
+
+<!-- Dharma Shield Hindu Apologetics -->
+
+<div class="book-card">
+
+<h3>The Dharma Shield – Hindu Apologetics</h3>
+
+<div class="button-row">
+
+<a href="https://helixoriginator.gumroad.com/l/dharma-shield"
+class="btn gumroad" target="_blank">
+Gumroad
+</a>
+
+</div>
+
+</div>
+
+<!-- Hunger That Never Ends -->
 
 <div class="book-card">
 
 <h3>The Hunger That Never Ends</h3>
 
-<p>Wisdom Tales on Greed and Contentment</p>
-
 <div class="button-row">
 
 <a href="https://superprofile.bio/vp/the-hunger-that-never-ends"
-class="store-btn superprofile" target="_blank">
-
+class="btn superprofile" target="_blank">
 Superprofile
-
 </a>
 
 </div>
 
 </div>
 
-<!-- SILENT WARS -->
+<!-- Additional Superprofile ebook -->
+
+<div class="book-card">
+
+<h3>Special Ebook Collection</h3>
+
+<div class="button-row">
+
+<a href="https://superprofile.bio/vp/your-payment-page-title-here-612-822"
+class="btn superprofile" target="_blank">
+Superprofile
+</a>
+
+</div>
+
+</div>
+
+<!-- Silent Wars -->
 
 <div class="book-card">
 
 <h3>Silent Wars</h3>
 
-<p>Geopolitical Strategies Understanding</p>
-
 <div class="button-row">
 
 <a href="https://www.amazon.in/Silent-Wars-Geopolitical-Strategies-Understanding/dp/B0FBBJJC8D"
-class="store-btn amazon" target="_blank">
-
+class="btn amazon" target="_blank">
 Amazon
-
 </a>
 
 </div>
@@ -330,33 +255,17 @@ Amazon
 
 <footer>
 
-<div class="contact">
-
-Contact:
-<a href="mailto:kallolchitralimagicpen@gmail.com">
-
-kallolchitralimagicpen@gmail.com
-
-</a>
-
+<div>
+Contact: kallolchitralimagicpen@gmail.com
 </div>
 
-<p class="quote">
-
-"Built with wisdom. Shared with purpose."
-
-</p>
-
-<p class="quote">
-
-Simple. Practical. Powerful.
-
-</p>
+<div class="quote">
+Built with wisdom. Shared with purpose.
+</div>
 
 </footer>
 
 </div>
 
 </body>
-
 </html>
