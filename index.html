@@ -1,361 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kallol Chakrabarti - Digital Book Library</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-background: linear-gradient(135deg,#0a0e27 0%,#1a1535 50%,#2d1b4e 100%);
-color:#e0e0e0;
-font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-line-height:1.6;
-min-height:100vh;
-
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-header{
-
-text-align:center;
-padding:60px 20px;
-background: linear-gradient(135deg,rgba(138,43,226,0.1),rgba(75,0,130,0.1));
-border-radius:20px;
-margin-bottom:50px;
-border:1px solid rgba(138,43,226,0.3);
-
-}
-
-h1{
-
-font-size:3em;
-background: linear-gradient(135deg,#da70d6,#ba55d3,#9370db);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-}
-
-.tagline{
-
-color:#b8b8d1;
-max-width:800px;
-margin:auto;
-
-}
-
-.books-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-
-}
-
-.book-card{
-
-background: linear-gradient(145deg,rgba(30,30,60,0.6),rgba(20,20,40,0.6));
-border-radius:15px;
-padding:25px;
-border:1px solid rgba(138,43,226,0.2);
-
-}
-
-.book-card:hover{
-
-transform:translateY(-6px);
-box-shadow:0 10px 40px rgba(138,43,226,0.3);
-
-}
-
-.book-card h3{
-
-color:#da70d6;
-margin-bottom:10px;
-
-}
-
-.book-card p{
-
-color:#c0c0d8;
-
-}
-
-.button-row{
-
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:15px;
-
-}
-
-.btn{
-
-flex:1;
-min-width:140px;
-text-align:center;
-padding:10px;
-border-radius:20px;
-text-decoration:none;
-font-weight:600;
-
-}
-
-.superprofile{
-
-background:#8a2be2;
-color:white;
-
-}
-
-.gumroad{
-
-background:#ff66cc;
-color:white;
-
-}
-
-.amazon{
-
-background:#ff9900;
-color:black;
-
-}
-
-footer{
-
-text-align:center;
-margin-top:40px;
-padding:20px;
-border-top:1px solid rgba(138,43,226,0.2);
-
-}
-
-.quote{
-
-color:#9370db;
-margin-top:10px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<header>
-
-<h1>Kallol Chakrabarti</h1>
-
-<p class="tagline">
-
-Digital library of practical wisdom and modern insights featuring philosophy, geopolitics, and empowerment guides.
-
-</p>
-
-</header>
-
-
-<div class="books-grid">
-
-
-<!-- GHAR SE SHAKTI -->
-
-<div class="book-card">
-
-<h3>Ghar Se Shakti</h3>
-
-<p>A Practical Guide for the Confident Homemaker</p>
-
-<div class="button-row">
-
-<a href="https://superprofile.bio/vp/ghar-se-shakti-a-practical-guide-for-the-confident-homemaker"
-class="btn superprofile" target="_blank">
-
-SuperProfile
-
-</a>
-
-<a href="https://helixoriginator.gumroad.com/l/clyjln"
-class="btn gumroad" target="_blank">
-
-Gumroad
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- HUNGER -->
-
-<div class="book-card">
-
-<h3>The Hunger That Never Ends</h3>
-
-<p>Wisdom Tales on Greed and Contentment</p>
-
-<div class="button-row">
-
-<a href="https://superprofile.bio/vp/the-hunger-that-never-ends"
-class="btn superprofile" target="_blank">
-
-SuperProfile
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- DHARMA SHIELD APOLOGETICS -->
-
-<div class="book-card">
-
-<h3>The Dharma Shield: 50 Powerful Responses for Hindu Apologetics</h3>
-
-<div class="button-row">
-
-<a href="https://superprofile.bio/vp/the-dharma-shield-50-powerful-responses-for-hindu-apologetics"
-class="btn superprofile" target="_blank">
-
-SuperProfile
-
-</a>
-
-<a href="https://helixoriginator.gumroad.com/l/dharma-shield"
-class="btn gumroad" target="_blank">
-
-Gumroad
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- STORIES -->
-
-<div class="book-card">
-
-<h3>Stories of the Dharma Shield</h3>
-
-<p>15 Wisdom Tales for the Modern Mind</p>
-
-<div class="button-row">
-
-<a href="https://superprofile.bio/vp/stories-of-the-dharma-shield-15-wisdom-tales-for-the-modern-mind"
-class="btn superprofile" target="_blank">
-
-SuperProfile
-
-</a>
-
-<a href="https://helixoriginator.gumroad.com/l/xhido"
-class="btn gumroad" target="_blank">
-
-Gumroad
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- VILLAGE OF SEVEN WELLS -->
-
-<div class="book-card">
-
-<h3>The Village of Seven Wells</h3>
-
-<div class="button-row">
-
-<a href="https://helixoriginator.gumroad.com/l/clyjln"
-class="btn gumroad" target="_blank">
-
-Gumroad
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- SILENT WARS -->
-
-<div class="book-card">
-
-<h3>Silent Wars</h3>
-
-<div class="button-row">
-
-<a href="https://www.amazon.in/Silent-Wars-Geopolitical-Strategies-Understanding/dp/B0FBBJJC8D"
-class="btn amazon" target="_blank">
-
-Amazon
-
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<footer>
-
-<p>
-
-Contact:
-<a href="mailto:kallolchitralimagicpen@gmail.com">
-
-kallolchitralimagicpen@gmail.com
-
-</a>
-
-</p>
-
-<p class="quote">
-
-Built with wisdom. Shared with purpose.
-
-</p>
-
-<p class="quote">
-
-Simple. Practical. Powerful.
-
-</p>
-
-</footer>
-
-</div>
-
-</body>
-
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+<title>Kallol Chakrabarti - Digital Book Library</title>   
+<style>   
+*{ 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+}   
+body{   
+  background: linear-gradient(135deg,#0a0e27 0%,#1a1535 50%,#2d1b4e 100%); 
+  color:#e0e0e0; 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  line-height:1.6; 
+  min-height:100vh;   
+}   
+.container{ 
+  max-width:1200px; 
+  margin:auto; 
+  padding:20px; 
+}   
+header{ 
+  text-align:center; 
+  padding:60px 20px; 
+  background: linear-gradient(135deg,rgba(138,43,226,0.1), rgba(75,0,130,0.1)); 
+  border-radius:20px; 
+  margin-bottom:50px; 
+  border:1px solid rgba(138,43,226,0.3);   
+}   
+h1{   
+  font-size:3em; 
+  background: linear-gradient(135deg,#da70d6,#ba55d3,#9370db); 
+  -webkit-background-clip:text; 
+  -webkit-text-fill-color:transparent;   
+}   
+.tagline{   
+  color:#b8b8d1; 
+  max-width:800px; 
+  margin:auto;   
+}   
+.books-grid{ 
+  display:grid; 
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); 
+  gap:30px;   
+}   
+.book-card{   
+  background: linear-gradient(145deg,rgba(30,30,60,0.6), rgba(20,20,40,0.6)); 
+  border-radius:15px; 
+  padding:25px; 
+  border:1px solid rgba(138,43,226,0.2);   
+}   
+.book-card:hover { 
+  transform:translateY(-6px); 
+  box-shadow:0 10px 40px rgba(138,43,226,0.3);   
+}   
+.book-card h3{   
+  color:#da70d6; 
+  margin-bottom:10px;   
+}   
+.book-card p{   
+  color:#c0c0d8;   
+}   
+.button-row{ 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:10px; 
+  margin-top:15px;   
+}   
+.btn {   
+  flex:1; 
+  min-width:140px; 
+  text-align:center; 
+  padding:10px; 
+  border-radius:20px; 
+  text-decoration:none; 
+  font-weight:600;   
+}   
+.superprofile {   
+  background:#8a2be2; 
+  color:white;   
+}   
+.gumroad {   
+  background:#ff66cc; 
+  color:white;   
+}   
+.amazon{   
+  background:#ff9900; 
+  color:black;   
+}   
+footer{ 
+  text-align:center; 
+  margin-top:40px; 
+  padding:20px; 
+  border-top:1px solid rgba(138,43,226,0.2);   
+}   
+.quote{   
+  color:#9370db; 
+  margin-top:10px;   
+}   
+</style>   
+</head>   
+<body>   
+<div class="container">   
+  <header>   
+    <h1>Kallol Chakrabarti</h1>   
+    <p class="tagline">   
+      Digital library of practical wisdom and modern insights featuring philosophy, geopolitics, and empowerment guides.   
+    </p>   
+  </header>     
+  <div class="books-grid">     
+    <!-- GHAR SE SHAKTI -->   
+    <div class="book-card">   
+      <h3>Ghar Se Shakti</h3>   
+      <p>A Practical Guide for the Confident Homemaker</p>   
+      <div class="button-row">   
+        <a href="https://superprofile.bio/vp/ghar-se-shakti-a-practical-guide-for-the-confident-homemaker" 
+        class="btn superprofile" target="_blank">SuperProfile</a>   
+        <a href="https://gumroad.com/products" 
+        class="btn gumroad" target="_blank">Gumroad</a>   
+      </div>   
+    </div>     
+    <!-- HUNGER -->   
+    <div class="book-card">   
+      <h3>The Hunger That Never Ends</h3>   
+      <p>Wisdom Tales on Greed and Contentment</p>   
+      <div class="button-row">   
+        <a href="https://superprofile.bio/vp/the-hunger-that-never-ends" 
+        class="btn superprofile" target="_blank">SuperProfile</a>   
+      </div>   
+    </div>     
+    <!-- DHARMA SHIELD APOLOGETICS -->   
+    <div class="book-card">   
+      <h3>The Dharma Shield: 50 Powerful Responses for Hindu Apologetics</h3>   
+      <div class="button-row">   
+        <a href="https://superprofile.bio/vp/the-dharma-shield-50-powerful-responses-for-hindu-apologetics" 
+        class="btn superprofile" target="_blank">SuperProfile</a>   
+        <a href="https://gumroad.com/products" 
+        class="btn gumroad" target="_blank">Gumroad</a>   
+      </div>   
+    </div>     
+    <!-- STORIES -->   
+    <div class="book-card">   
+      <h3>Stories of the Dharma Shield</h3>   
+      <p>15 Wisdom Tales for the Modern Mind</p>   
+      <div class="button-row">   
+        <a href="https://superprofile.bio/vp/stories-of-the-dharma-shield-15-wisdom-tales-for-the-modern-mind" 
+        class="btn superprofile" target="_blank">SuperProfile</a>   
+        <a href="https://gumroad.com/products" 
+        class="btn gumroad" target="_blank">Gumroad</a>   
+      </div>   
+    </div>     
+    <!-- VILLAGE OF SEVEN WELLS -->   
+    <div class="book-card">   
+      <h3>The Village of Seven Wells</h3>   
+      <div class="button-row">   
+        <a href="https://gumroad.com/products" 
+        class="btn gumroad" target="_blank">Gumroad</a>   
+      </div>   
+    </div>     
+    <!-- AMAZON BOOKSHELF LINK (NEW) -->   
+    <div class="book-card">   
+      <h3>My Amazon Bookshelf</h3>   
+      <p>Browse all my published works on Amazon KDP</p>   
+      <div class="button-row">   
+        <a href="https://kdp.amazon.com/en_US/bookshelf?ref_=kdp_kdp_TAC_TN_bs" 
+        class="btn amazon" target="_blank">Amazon KDP Bookshelf</a>   
+      </div>   
+    </div>   
+  </div>     
+  <footer>   
+    <p>   
+      Contact: 
+      <a href="mailto:kallolchitralimagicpen@gmail.com">   
+        kallolchitralimagicpen@gmail.com   
+      </a>   
+    </p>   
+    <p class="quote">   
+      Built with wisdom. Shared with purpose.   
+    </p>   
+    <p class="quote">   
+      Simple. Practical. Powerful.   
+    </p>   
+  </footer>   
+</div>   
+</body>   
 </html>
